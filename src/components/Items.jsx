@@ -1,41 +1,22 @@
-import { useState } from "react";
 
-const Items = ({ item ,cartCount ,setCart }) => {
 
-  let [iscart, setIsCart] = useState(true);
+const Items = ({ item }) => {
 
-  
-const onHandleClicked = () => {
-    if (iscart) {
-      setIsCart(false);
-      Increament();
-    }else{
-      if(!iscart)
-      setIsCart(true)
-    Decreament();
-    }
-  };
+ 
 
-let Increament=()=>{
-  cartCount+=1
-  setCart(cartCount);
-}
-let Decreament=()=>{
-  setCart(cartCount-=1)
-}
   return (
     <>
-      <ul className="ul">
+      <ul className="list-group list-group-flush">
         {
-          <li key={item}>
+          <li key={item} className="list-group-item d-flex justify-content-between align-items-center">
             <span>{item}</span>
-            <button
-              className="btn"
+            {/* <button
+              className="btn btn-sm "
               onClick={onHandleClicked}
-              style={{ backgroundColor: iscart ? "green" : "Red" }}
+              style={{ backgroundColor: iscart ? "blue" : "Red" }}
             >
               {iscart ?"Add to Cart" : "Remove from Cart" }
-            </button>
+            </button> */}
           </li>
         }
       </ul>

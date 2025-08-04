@@ -24,8 +24,9 @@ function AddTool({ onNewItem }) {
   return (
     <div className="container text-start">
       <div className="row">
-        <div className="col-6">
+        <div className="col-6 d-flex gap-2 mb-3 flex-wrap">
           <input
+          className="form-control flex-fill"
             type="text"
             placeholder="Choose Place jaan.."
             value={ToDoName}
@@ -34,12 +35,12 @@ function AddTool({ onNewItem }) {
           ></input>
         </div>
         <div className="col-4">
-          <input type="date" value={Duedate} onChange={HandleDateChange} placeholder="Here chooe Date babu.." required/>
+          <input className="form-control" type="date" value={Duedate} onChange={HandleDateChange} placeholder="Here chooe Date babu.." required/>
         </div>
         <div className="col-2">
           <button
             type="button"
-            className="btn btn-success"
+            className="btn btn-success fw-semibold"
             onClick={onHandleAddClicked}
           >
             Add

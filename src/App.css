@@ -1,47 +1,234 @@
-.header{
-    font-size: 25px;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    margin-inline: 10px auto;
-    align-items: center;
+body {
+  padding-top: 50px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 10px auto;
+  align-items: center;
+}
+.footer{
+    box-shadow: 0px 3px 3px 3px rgb(240, 240, 240);
+  background-color: #ddb347;
+}
+.row input {
+  width: 100%;
 }
 
-.row input{
-    width: 100%;
+button {
+  min-width: 80px;
 }
 
-button{
-    min-width: 80px;
+.navbar ul {
+  font-size: 25px;
+  font-weight: 700;
+  position: relative;
+  list-style: none;
+  border: 1px solid grey;
+  border-radius: 10px;
+  min-width: 300px;
+}
+.navbar ul button {
+  float: right;
+  margin-right: 10px;
 }
 
-
-ul{
-    font-size: 25px;
-    font-weight: 700;
-    position: relative;
-    list-style: none;
-    border: 1px solid grey;
-    border-radius: 10px;
-    min-width: 300px;
-}
-ul button{
-    float: right;
-    margin-right : 10px;
+.input {
+  width: 100%;
+  height: 40px;
+  margin-block: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
 }
 
-.input{
-    width: 100%;
-    height: 40px;
-    margin-block: 10px;
-    border-radius: 10px;
-    border: 1px solid grey;
+.btn-warning {
+  background-color: #f0c14b;
+  border-color: #a88734;
+  color: #111;
 }
 
-.container1{
-    border:  1px solid grey;
-    min-width: 300px;
-    padding: 15px;
-    margin: 15px;
-    border-radius:5px ;
+.btn-warning:hover {
+  background-color: #ddb347;
 }
+.card {
+  border-radius: 1rem;
+}
+
+.btn-success {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.btn-success:hover {
+  background-color: #45a049;
+}
+
+.logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user_name {
+  color: #8d0ada;
+}
+
+.carouselImg img{
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  margin-top: 25px;
+  /* box-shadow: 0px 3px 3px 3px rgb(240, 240, 240); */
+}
+
+.login{
+    background-color: #fff;
+  box-shadow: 0px 3px 3px 3px rgb(240, 240, 240);
+  width: 400px;
+  padding: 10px;
+  height: 450px;
+  border-radius: 11px;
+  /* overflow: hidden; */
+}
+
+/* Meals Section  */
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+  justify-content: center;
+  /* background-color: blueviolet; */
+  margin: auto;
+  margin-top: 44px;
+}
+.meals img {
+  width: 100%;
+  height: 270px;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+.mealImg {
+  width: 280px;
+  height: 380px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 3px 3px 3px rgb(240, 240, 240);
+  border-radius: 11px;
+  transition: all 0.3s ease-in-out;
+}
+.mealImg:hover{
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+.mealImg p {
+  font-weight: 600;
+}
+.mealImg button {
+  width: 120px;
+  background-color: orange;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 21px;
+  padding: 7px;
+  cursor: pointer;
+}
+.mealButton {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mealInfo img {
+  width: 400px;
+  height: 400px;
+  border-radius: 11px;
+}
+.mealInfo {
+  /* width: 90%; */
+  height: 90vh;
+  margin: auto;
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 181, 42);
+  padding: 32px;
+}
+.mealInfo button {
+  border: none;
+  padding: 9px;
+  border-radius: 6px;
+  font-size: 19px;
+  background-color: orangered;
+  color: #fff;
+}
+.mealInfo .info {
+  margin-top: -112px;
+}
+.msg {
+  text-align: center;
+  font-weight: 700;
+}
+.head {
+  text-align: center;
+}
+
+.countCartImg{
+  width: 25px;
+  filter: invert(1);
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+/* Meals Section End */
+
+@media (max-width: 767px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+.apple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Shimmer Effect CSS Start */
+.mealImg .para {
+  height: 10px;
+}
+/* Shimmer Effect CSS End */
+/* Cart Components CSS Start */
+.CartDetail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cartHeader {
+  background-color: blue;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+  font-weight: 700;
+}
+
+.emptyCart {
+  text-align: center;
+  margin-top: 3rem;
+}
+.emptyCart img{
+  margin-bottom: 2rem;
+}
+.emptyCart p{
+  font-weight: 700;
+}
+.deleteSvg:hover{
+  font-size: 30px;
+  color: red;
+}
+/* Cart Components CSS End */

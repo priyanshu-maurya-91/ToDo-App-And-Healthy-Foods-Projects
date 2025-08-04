@@ -13,7 +13,7 @@ function ToDoItem2() {
                 <h3>{ToDoDate}</h3>
             </div>
             <div className="col-2">
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-danger" >Delete</button>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-function ToDoItem({ToDoName , ToDoDate}) {
+function ToDoItem({ToDoName , ToDoDate, HandleDelete}) {
 
     // let ToDoName = "Buy Milk"
     // let ToDoDate = "4/10/2023"
@@ -7,13 +7,13 @@ function ToDoItem({ToDoName , ToDoDate}) {
     return <div className="container">
         <div className="row p-2 text-start">
             <div className="col-6">
-                <h3>{ToDoName}</h3>
+            <span className="fw-semibold">{ToDoName}</span>
             </div>
             <div className="col-4">
-                <h3>{ToDoDate}</h3>
+                 <small className="text-muted ms-2">{ToDoDate}</small>
             </div>
             <div className="col-2">
-                <button type="button" className="btn btn-danger">Delete</button>
+                <button type="button" className="btn btn-sm btn-outline-danger"onClick={HandleDelete}>Delete</button>
             </div>
         </div>
     </div>

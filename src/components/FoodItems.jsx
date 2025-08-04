@@ -1,14 +1,14 @@
 import Items from "./Items";
 
 
-const FoodItems =({FoodList , cartCount ,setCart})=>{
+const FoodItems =({FoodList})=>{
 
  
 
     return(
         <>
         {
-        FoodList.map((item)=><Items key={item} item={item} cartCount={cartCount} setCart={setCart}></Items>)
+        FoodList.map((item)=><Items key={item} item={item}></Items>)
       }
         </>
     )
