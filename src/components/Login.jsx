@@ -1,29 +1,33 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../Features/UserSlice";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-  const HandleSubmit = (event) => {
-    event.preventDefault();
+    const dispatch = useDispatch();
+    const HandleSubmit = (event) => {
+      event.preventDefault();
 
-    if ((name.length && email.length && password.length !== 0)) {
-      dispatch(
-        login({
-          name: name,
-          email: email,
-          password: password,
-          loggedIn: true,
-        })
-      );
-    }else{
-        alert("Please fill all fields before submitting!")
-    }
-  };
+      if (name.length && email.length && password.length !== 0) {
+        dispatch(
+          login({
+            name: name,
+            email: email,
+            password: password,
+            loggedIn: true,
+          })
+        );
+        navigate("/");
+      } else {
+        alert("Please fill all fields before submitting!");
+      }
+    };
+ 
 
   return (
     <div className="login form-signin m-auto mt-5 mb-5">
@@ -34,7 +38,7 @@ const Login = () => {
           alt="Logo Image"
           width="72"
           height="57"
-          ></img>
+        ></img>
         <h1 className="h3 mb-3 fw-normal">Login Here</h1>
         <div className="form-floating">
           <input

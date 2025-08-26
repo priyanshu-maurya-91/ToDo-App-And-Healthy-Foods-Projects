@@ -7,9 +7,9 @@ import { Route, Routes } from "react-router";
 import Home from "./NavComponents/Home";
 import About from "./NavComponents/About";
 import Cart from "./NavComponents/Cart";
-import ToDo from "./NavComponents/ToDo";
 import { useSelector } from "react-redux";
 import MealInfo from "./components/MealInfo";
+import ProtectedRoutes from "./NavComponents/ProtectedRoutes";
 
 function App() {
      const user = useSelector((state) => state.userSlice.user);
@@ -19,12 +19,20 @@ function App() {
    
     <Header></Header>
     <Routes>
-      <Route path="/" element={<Home></Home>}></Route>
-      <Route path="/About" element={<About></About>}></Route>
-      <Route path="/Cart" element={<Cart></Cart>}></Route>
-      <Route path="/ToDo" element={<ToDo></ToDo>}></Route>
-      <Route path="/Login" element={user ? <Logout/> : <Login/>}></Route>
-      <Route path="/:MealId" element={<MealInfo/>}></Route>
+       <Route path="/Login" element={user ? <Logout/> : <Login/>}></Route>
+
+      <Route path="/" element={<ProtectedRoutes>
+        <Home></Home>
+      </ProtectedRoutes>}></Route>
+      <Route path="/About" element={<ProtectedRoutes>
+        <About></About>
+      </ProtectedRoutes>}></Route>
+      <Route path="/Cart" element={<ProtectedRoutes>
+        <Cart></Cart>
+      </ProtectedRoutes>}></Route>
+      <Route path="/:MealId" element={<ProtectedRoutes>
+        <MealInfo/>
+      </ProtectedRoutes>}></Route>
     </Routes>
    
  <Footer></Footer> 

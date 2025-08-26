@@ -1,5 +1,5 @@
 import FoodItems from "../components/FoodItems";
-import ErrorMsg from "../components/errorMsg";
+import { Link } from "react-router-dom";
 import Input from "../components/Input";
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -28,7 +28,9 @@ const Home = () => {
             <h1 className="h5 fw-bold text-dark mb-0">
               <b>Healthy Foods</b>
             </h1>
+            <Link to="/Cart">
             <span className="badge bg-secondary"> <img className="countCartImg" src="../src/assets/cart-icon.svg"></img> Cart: {cartCount}</span>
+            </Link>
           </div>
           <Input onHandleKeyDown={onHandleDown} />
           {/* <ErrorMsg FoodList={FoodList} /> */}

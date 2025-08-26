@@ -3,7 +3,7 @@ import React from "react";
 const Shimar = () => {
   return (
     <>
-    <div className="apple">
+    <div className="d-flex justify-content-center align-items-cenetr flex-wrap">
       <div className="meals">
         <div className="mealImg">
           <div className="img h-75 bg-secondary bg-opacity-50 mb-3 rounded-3" ></div>

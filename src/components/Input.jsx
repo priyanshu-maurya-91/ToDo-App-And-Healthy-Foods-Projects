@@ -59,9 +59,8 @@ const Input = ({ onHandleKeyDown }) => {
         <Shimar />
       ) : (
         <div>
-          {" "}
           <h4 className="msg">{msg}</h4>
-          <div className="apple">
+          <div className="d-flex justify-content-center align-items-cenetr flex-wrap">
             {/* yadi meri search item api me exits krti hai too usko do, nhi too Data not found msg dedo */}
             {!seacrhItem
               ? "Data Not Found "

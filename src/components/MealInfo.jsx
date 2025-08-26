@@ -25,13 +25,27 @@ const MealInfo = () => {
  
 
   return (
-    <div className="mealInfo">
-      <img src={info?.strMealThumb} alt="" />
-      <div className="info mt-5">
-        <h1>Recipe Detail</h1>
-        <button>{info?.strMeal}</button>
-        <h3>Instructions</h3>
-        <p>{info?.strInstructions}</p>
+    <div className="container mealContainer">
+      <div className="row mt-5">
+        {/* Image Section */}
+        <div className="col-md-6 mb-4">
+          <img
+            src={info?.strMealThumb}
+            alt={info?.strMeal}
+            className="img-fluid rounded shadow"
+          />
+        </div>
+
+        {/* Info Section */}
+        <div className="col-md-6">
+          <h2 className="text-danger fw-bold mb-3">Recipe Detail</h2>
+          <button className="btn btn-warning mb-3">{info?.strMeal}</button>
+
+          <h4 className="text-primary">Instructions</h4>
+          <p className="text-secondary" style={{ textAlign: 'justify' }}>
+            {info?.strInstructions}
+          </p>
+        </div>
       </div>
     </div>
   );

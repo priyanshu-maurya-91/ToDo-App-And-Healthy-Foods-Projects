@@ -7,7 +7,7 @@ const Cart = () => {
   const CartItems = useSelector((state) => state.Slice2.items);
   const dispatch = useDispatch();
 
-  console.log(CartItems);
+  // console.log(CartItems);
 const HandleDelete =(item)=>{
   console.log("Item was delete", item);
   dispatch(removeFromCart(item));
@@ -16,8 +16,8 @@ const HandleDelete =(item)=>{
 };
 
   return (
-    <div className="mt-4 h-100">
-      <div className="cartHeader">
+    <div className="h-100">
+      <div className="cartHeader mt-4">
         <h2>Welcome to your Foods Cart</h2>
       </div>
 
@@ -31,6 +31,9 @@ const HandleDelete =(item)=>{
                 Explore foods and buy your<br></br>
                 favourite items
               </p>
+              <Link to="/">
+              <button className="btn btn-danger">Explore Foods</button>
+              </Link>
             </div>
           </div>
           
